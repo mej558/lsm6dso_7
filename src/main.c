@@ -107,7 +107,8 @@ static void test_polling_mode(const struct device *dev)
 
 int main(void)
 {
-	const struct device *const dev = DEVICE_DT_GET_ONE(st_lsm6dso);
+	const struct device *const dev = DEVICE_DT_GET_ONE(st_lsm6dso32);
+	// const struct device *const dev = NULL; // this compiles...
 
 	if (!device_is_ready(dev)) {
 		printk("%s: device not ready.\n", dev->name);
